@@ -1,171 +1,116 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI;
 }
 
-body {
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: white;
-    scroll-behavior: smooth;
+body{
+    background:#020617;
+    color:white;
 }
 
-/* NAV */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background: rgba(0,0,0,0.5);
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
+header{
+    text-align:center;
+    padding:20px;
+    background:#0f172a;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:15px;
+    padding:15px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
+.panel{
+    background:#0f172a;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,255,255,0.1);
 }
 
-nav a:hover {
-    color: cyan;
+h2{
+    margin-bottom:10px;
+    font-size:16px;
+    color:#38bdf8;
 }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 60px 20px;
-    animation: fadeIn 1.5s ease;
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:10px;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.small{
+    grid-template-columns:repeat(3,1fr);
 }
 
-/* SECTIONS */
-.section {
-    padding: 40px 20px;
+.box{
+    background:#1e293b;
+    padding:10px;
+    text-align:center;
+    border-radius:8px;
 }
 
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* CONTENEDORES */
+.card{
+    background:#1e293b;
+    padding:10px;
+    border-radius:8px;
+    font-size:12px;
 }
 
-.card {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,255,255,0.1);
-    transition: 0.3s;
+.progress{
+    height:6px;
+    background:#334155;
+    border-radius:5px;
+    margin:5px 0;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.fill{
+    height:100%;
+    background:#22c55e;
 }
 
-.card.alert {
-    border: 1px solid red;
+/* MAPA */
+.map{
+    height:200px;
+    background:#1e293b;
+    border-radius:10px;
+    position:relative;
+    overflow:hidden;
 }
 
-/* PROGRESS */
-.progress {
-    background: #1e293b;
-    height: 10px;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-.fill {
-    height: 100%;
-    background: orange;
-    border-radius: 5px;
-    animation: load 2s ease;
-}
-
-.fill.green { background: #22c55e; }
-.fill.red { background: #ef4444; }
-
-/* GRID SISTEMA */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.box {
-    background: #1e293b;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.box:hover {
-    background: #0ea5e9;
-}
-
-/* VARIABLES */
-.variables {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.var {
-    flex: 1;
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* MAP */
-.map {
-    height: 200px;
-    background: #1e293b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+/* PUNTOS */
+.point{
+    width:8px;
+    height:8px;
+    background:red;
+    border-radius:50%;
+    position:absolute;
 }
 
 /* STATS */
-.stats {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
 }
 
-.stat {
-    background: #0ea5e9;
-    padding: 15px;
-    border-radius: 10px;
+.stat{
+    background:#1e293b;
+    padding:10px;
+    border-radius:8px;
+    font-size:13px;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes load {
-    from {width: 0;}
+/* LOG */
+.log{
+    height:120px;
+    overflow:auto;
+    font-size:11px;
+    background:black;
+    padding:10px;
 }
