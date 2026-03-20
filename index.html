@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Simulación Inteligente de Recolección</title>
-
-<link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Bogotá</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Simulación de Recolección Inteligente</h1>
-    <p class="subtitulo">Optimización de rutas basada en datos simulados (IoT)</p>
+    <h1>Smart Waste Bogotá</h1>
+    <p>Monitoreo inteligente de residuos en tiempo real</p>
 </header>
 
-<main class="container">
+<main>
 
-    <!-- MAPA -->
-    <section class="map-section">
-        <div class="map" id="map">
-            <svg id="lines"></svg>
+    <section class="dashboard">
+        <h2>Estado de Contenedores</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Contenedor #1</h3>
+                <div class="progress">
+                    <div class="fill" style="width: 80%"></div>
+                </div>
+                <p>80% lleno</p>
+            </div>
+
+            <div class="card">
+                <h3>Contenedor #2</h3>
+                <div class="progress">
+                    <div class="fill green" style="width: 30%"></div>
+                </div>
+                <p>30% lleno</p>
+            </div>
+
+            <div class="card">
+                <h3>Contenedor #3</h3>
+                <div class="progress">
+                    <div class="fill red" style="width: 95%"></div>
+                </div>
+                <p>95% lleno (ALERTA)</p>
+            </div>
+
         </div>
-        <p class="map-label">Mapa simulado de contenedores urbanos</p>
     </section>
 
-    <!-- PANEL -->
-    <aside class="panel">
-
-        <h2>Control de Simulación</h2>
-
-        <button onclick="simular()">Generar simulación</button>
-
-        <div class="resultados">
-
-            <div class="card">
-                <h3>Contenedores prioritarios</h3>
-                <p id="resultado">0</p>
-            </div>
-
-            <div class="card">
-                <h3>IDs seleccionados</h3>
-                <p id="lista">-</p>
-            </div>
-
-            <div class="card">
-                <h3>Eficiencia simulada</h3>
-                <p id="eficiencia">0%</p>
-            </div>
-
+    <section class="routes">
+        <h2>Ruta Optimizada</h2>
+        <div class="map">
+            <p>Simulación de ruta inteligente</p>
         </div>
+    </section>
 
-        <hr>
-
-        <div class="info-extra">
-            <p><strong>Total contenedores:</strong> 5</p>
-            <p><strong>Modelo:</strong> Simulación sin datos reales</p>
-            <p><strong>Criterio:</strong> >70% = recolección</p>
+    <section class="stats">
+        <h2>Indicadores</h2>
+        <div class="stats-grid">
+            <div class="stat">Tiempo: 35 min</div>
+            <div class="stat">Combustible: 12L</div>
+            <div class="stat">Eficiencia: +25%</div>
         </div>
-
-    </aside>
+    </section>
 
 </main>
 
 <footer>
-    <p>Demo académico - Ingeniería de Sistemas</p>
+    <p>Proyecto IoT - Ingeniería de Sistemas</p>
 </footer>
-
-<script src="js/script.js"></script>
 
 </body>
 </html>
