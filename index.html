@@ -1,120 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Waste Bogotá - IoT</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Waste System</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-    <h2>SmartWaste</h2>
-    <ul>
-        <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#sistema">Sistema</a></li>
-        <li><a href="#variables">Variables</a></li>
-        <li><a href="#rutas">Rutas</a></li>
-    </ul>
-</nav>
-
 <header>
-    <h1>Sistema Inteligente de Recolección de Residuos</h1>
-    <p>Basado en IoT, análisis de datos y optimización de rutas</p>
+    <h1>SMART WASTE IOT SYSTEM</h1>
+    <p>Monitoreo · Optimización · Analítica en Tiempo Real</p>
 </header>
 
-<main>
+<main class="dashboard">
 
-<section id="dashboard" class="section">
-    <h2>Monitoreo en Tiempo Real</h2>
+    <!-- CONTENEDORES -->
+    <section class="panel">
+        <h2>Contenedores</h2>
+        <div id="contenedores" class="grid"></div>
+    </section>
 
-    <div class="cards">
+    <!-- RUTA -->
+    <section class="panel">
+        <h2>Ruta Óptima</h2>
+        <div class="map" id="mapa"></div>
+    </section>
 
-        <div class="card">
-            <h3>Contenedor 1</h3>
-            <div class="progress">
-                <div class="fill" style="width: 80%"></div>
-            </div>
-            <span>80%</span>
+    <!-- METRICAS -->
+    <section class="panel">
+        <h2>Métricas Operativas</h2>
+        <div class="stats">
+            <div class="stat" id="tiempo"></div>
+            <div class="stat" id="combustible"></div>
+            <div class="stat" id="eficiencia"></div>
+            <div class="stat" id="distancia"></div>
+            <div class="stat" id="trafico"></div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Contenedor 2</h3>
-            <div class="progress">
-                <div class="fill green" style="width: 35%"></div>
-            </div>
-            <span>35%</span>
+    <!-- SISTEMA -->
+    <section class="panel">
+        <h2>Sistema IoT</h2>
+        <div class="grid small">
+            <div class="box">Sensores</div>
+            <div class="box">Gateway</div>
+            <div class="box">Cloud</div>
+            <div class="box">Big Data</div>
+            <div class="box">IA</div>
+            <div class="box">App Web</div>
         </div>
+    </section>
 
-        <div class="card alert">
-            <h3>Contenedor 3</h3>
-            <div class="progress">
-                <div class="fill red" style="width: 95%"></div>
-            </div>
-            <span>ALERTA</span>
-        </div>
-
-    </div>
-</section>
-
-<section id="sistema" class="section">
-    <h2>Arquitectura del Sistema</h2>
-    <div class="grid">
-
-        <div class="box">Sensores IoT</div>
-        <div class="box">Red de Comunicación</div>
-        <div class="box">Plataforma en la Nube</div>
-        <div class="box">Algoritmo de Optimización</div>
-        <div class="box">Aplicación Web</div>
-
-    </div>
-</section>
-
-<section id="variables" class="section">
-    <h2>Variables del Sistema</h2>
-
-    <div class="variables">
-
-        <div class="var">
-            <h4>Independientes</h4>
-            <ul>
-                <li>Nivel de llenado</li>
-                <li>Distancia</li>
-                <li>Tráfico</li>
-                <li>Ubicación</li>
-            </ul>
-        </div>
-
-        <div class="var">
-            <h4>Dependientes</h4>
-            <ul>
-                <li>Tiempo de ruta</li>
-                <li>Consumo combustible</li>
-                <li>Eficiencia</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-<section id="rutas" class="section">
-    <h2>Optimización de Rutas</h2>
-    <div class="map">
-        <p>Simulación dinámica de rutas inteligentes</p>
-    </div>
-
-    <div class="stats">
-        <div class="stat">Tiempo: 35 min</div>
-        <div class="stat">Combustible: 12L</div>
-        <div class="stat">Eficiencia: +25%</div>
-    </div>
-</section>
+    <!-- LOG -->
+    <section class="panel">
+        <h2>Eventos del Sistema</h2>
+        <div id="log" class="log"></div>
+    </section>
 
 </main>
 
-<footer>
-    <p>Proyecto Ingeniería de Sistemas - IoT aplicado a ciudades inteligentes</p>
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
